@@ -1,0 +1,10 @@
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (1, 1, 1, 1, 1, 1, 1, 1);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (2, 2, 2, 2, 2, 2, 2, 2);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (3, 3, 3, 3, 3, 3, 3, 3);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (4, 4, 4, 4, 4, 4, 4, 4);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (5, 5, 5, 5, 5, 5, 5, 5);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (6, 6, 6, 6, 6, 6, 6, 6);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (7, 7, 7, 7, 7, 7, 7, 7);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (8, 8, 8, 8, 8, 8, 8, 8);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (9, 9, 9, 9, 9, 9, 9, 9);
+insert lm_insp_regu_area (dc_cd, area_cd, area_nm, use_yn, dct_cd, rmk, reg_user, upt_user) values (10, 10, 10, 10, 10, 10, 10, 10);

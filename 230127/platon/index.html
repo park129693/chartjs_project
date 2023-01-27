@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $.ajax({
+        url: "../php/session.php",
+        type: "get",
+        dataType: 'json',
+        success:function(data) {
+          if(!data.email){
+            location.href = '/login.html'
+          } else if (data.email)
+          $("#useremail").html('<span id="useremail" >'+data.email+'</span>')
+          }
+        })
+      })
+
+    function beacon(){
+        $.ajax({
+        url:"php/lm_beacon_stat.php",
+        method:"POST",
+        success:function(data){
+            $('#table_data').html(data);
+            }
+        })
+    }
+    function workerDay() {
+        $.ajax({
+        url:"php/lm_insp_regu_area.php",
+        method:"POST",
+        success:function(data){
+            $('#table_data').html(data);
+            }
+        })
+    }
+
+    function SI() {
+        $('#menuList').empty()
+
+        var appendHtml=''
+        appendHtml += '<ul>'
+        appendHtml += '<li>- 물류센터관리</li>'
+        appendHtml += '<li>> POI 관리</li>'
+        appendHtml += '<li><a href="#" onclick="workerDay()" >> 작업 현황(일별)</a></li>'
+        appendHtml += '<li>> 세부 작업 이력(일별)</li>'
+        appendHtml += '<li><a href="#" onclick="beacon()" >> 비콘관리</a></li>'
+        appendHtml += '<li>> 작업자 관리</li>'
+        appendHtml += '</ul>'
+
+        $('#menuList').append(appendHtml)
+
+    }
+
+    function WI() {
+        $('#menuList').empty()
+
+        var appendHtml=''
+        appendHtml += '<ul>'
+        appendHtml += '<li>- 동선관리</li>'
+        appendHtml += '<li><a href="#">> 작업자 위치 조회</a></li>'
+        appendHtml += '<li>> 동선조회4</li>'
+        appendHtml += '<li>- 점검관리</li>'
+        appendHtml += '<li><a href="#">> 작업관리</a></li>'
+        appendHtml += '<li>> 정기 점검 조회</li>'
+        appendHtml += '<li>> 정기 점검 마스터</li>'
+        appendHtml += '<li>> 수시 점검 관리</li>'
+        appendHtml += '</ul>'
+
+        $('#menuList').append(appendHtml)
+    }
+
+        function SM() {
+
+        }
+        function SysM() {
+
+        }
+
+        function tableData(){
+        $.ajax({
+            url:"php/lm_insp_regu_area.php",
+            method:"POST",
+            success:function(data){
+                $('#table_data').html(data);
+              }
+            })
+          }
+          tableData()
+    </script>
+</head>
+<body>
+    <div class="navbar" >
+        <ul class="navmenu" >
+            <li><a href="#" onclick="SI()" >기준정보</a></li>
+            <li><a href="#" onclick="WI()" >작업정보</a></li>
+            <li><a href="#">안정관리</a></li>
+            <li><a href="#">시스템관리</a></li>
+        </ul>
+    </div>
+    <div class="context" >
+        <div class="tableData" id = "table_data">
+
+        </div>
+    </div>
+
+    <div class="sidebar" >            
+            <div class="sidetitle" >    
+                <div class="title" >
+                    <header>Platon</header>
+                </div>
+                <div class="sidebutton">
+                    <button><</button>
+                </div>
+            </div>
+        <div class="searchbar" >
+            <input placeholder="검색어를 입력하시오" >
+        </div>
+        <div class="menulist" id="menuList" >
+            <ul>
+                <li>- 물류센터관리</li>
+                <li><a href="#">> POI 관리</a></li>
+                <li><a href="#" onclick="workerDay()" >> 작업 현황(일별)</a></li>
+                <li>> 세부 작업 이력(일별)</li>
+                <li><a href="#" onclick="beacon()" >> 비콘관리</a></li>
+                <li>> 작업자 관리</li>
+            </ul>
+        </div>
+        <div class="loginstatus" >
+            <div class="userstatus" >
+                <span id="useremail" ></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="loginout" >
+                <button>로그아웃</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

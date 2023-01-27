@@ -1,0 +1,6 @@
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2);
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3);
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4);
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
+insert lm_beacon_stat (dc_cd, beacon_id,  `floor`, area, x, y, z,`uid`, rssi, batt_cap, his_seq, dct_cd, reg_user, upt_user) values (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6);

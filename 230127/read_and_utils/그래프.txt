@@ -1,0 +1,37 @@
+create table rm (
+   번호 bigint(100) unsigned not null auto_increment,
+   입고일자 varchar(40) not null,
+   발주번호 varchar(40) not null,
+   거래처코드 varchar(40) not null,
+   거래처명 varchar(40) not null,
+   물류센터코드 varchar(40) not null,
+   물류센터명 varchar(40) not null,
+   품목코드 varchar(40) not null,
+   품목명 varchar(40) not null,
+   온도대 varchar(40) not null,
+   입고수량 int(11) not null,
+   단위 varchar(20) not null,
+   primary key(번호)
+) DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+select date_format(입고일자, '%Y-%m') 입고수량, COUNT(*) FROM rm group by 입고수량;
+
+select sum(입고수량) from rm where 온도대='냉장';
+
+create table rm (
+   번호 bigint(100) unsigned not null auto_increment,
+   입고일자 varchar(40) not null,
+   발주번호 varchar(40) not null,
+   거래처코드 varchar(40) not null,
+   거래처명 varchar(40) not null,
+   물류센터코드 varchar(40) not null,
+   물류센터명 varchar(40) not null,
+   품목코드 varchar(40) not null,
+   품목명 varchar(40) not null,
+   온도대 varchar(40) not null,
+   입고수량 int(11) not null,
+   단위 varchar(20) not null,
+   email varchar(20) not null,
+   primary key(번호)
+) DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
